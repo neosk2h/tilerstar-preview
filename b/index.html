@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TILER STAR — Professional Tile &amp; Finishing Hand Tools</title>
+<meta name="description" content="Snap-off knives, AISI 1080 blades, one-piece stainless spatulas, and rebuildable skeleton caulk guns for tile setters. Designed in the USA.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="img/tilerstar-wordmark.png">
+<style>
+/* ------------------------------------------------------------------
+   TILER STAR — variant B, "clean system"
+   Light, quiet, wide-margined. Colour comes from the products only.
+   Self-contained: no external fonts, scripts or stylesheets.
+------------------------------------------------------------------- */
+
+:root{
+  --paper:#ffffff;
+  --paper-2:#f7f6f3;
+  --paper-3:#efeee9;
+  --ink:#111110;
+  --ink-2:#46463f;      /* body copy   — 9.6:1 on white  */
+  --ink-3:#6a6a60;      /* secondary   — 5.4:1 on white  */
+  --line:#e3e2dc;
+  --line-2:#cfcec7;
+  --red:#c8102e;        /* the glove red — used as a hairline accent only */
+
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Helvetica,
+         "Inter","Roboto",Arial,"Noto Sans",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+
+  --pad:20px;
+  --gap:clamp(28px,3.4vw,52px);
+  --section:clamp(64px,9vw,152px);
+  --measure:34em;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink-2);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  font-weight:400;
+  letter-spacing:-0.005em;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block;}
+a{color:inherit;}
+
+h1,h2,h3,h4{
+  color:var(--ink);
+  font-weight:500;
+  letter-spacing:-0.025em;
+  line-height:1.06;
+  margin:0;
+  text-wrap:balance;
+}
+p{margin:0;}
+
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--pad);}
+.measure{max-width:var(--measure);}
+.section{padding:var(--section) 0;}
+.rule{border:0;border-top:1px solid var(--line);margin:0;}
+
+/* ---------- small labels ---------- */
+.eyebrow{
+  font-size:0.6875rem;
+  letter-spacing:0.17em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  font-weight:500;
+  margin:0 0 1.25rem;
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+}
+.eyebrow::before{
+  content:"";
+  width:22px;height:2px;
+  background:var(--red);
+  flex:0 0 auto;
+}
+.eyebrow--plain::before{display:none;}
+
+.lead{
+  font-size:clamp(1.0625rem,1.35vw,1.3125rem);
+  line-height:1.5;
+  color:var(--ink-2);
+  letter-spacing:-0.012em;
+}
+
+/* ---------- links & buttons ---------- */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 1.65rem;
+  font-size:0.8125rem;
+  font-weight:500;
+  letter-spacing:0.11em;
+  text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid var(--ink);
+  background:var(--ink);
+  color:#fff;
+  border-radius:2px;
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.btn:hover{background:#000;border-color:#000;}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line-2);}
+.btn--ghost:hover{background:var(--paper-2);border-color:var(--ink);color:var(--ink);}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;}
+
+.txtlink{
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--line-2);
+  padding-bottom:1px;
+  font-weight:500;
+  transition:border-color .18s ease;
+}
+.txtlink:hover{border-color:var(--ink);}
+
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;}
+
+.skip{
+  position:absolute;left:-9999px;top:0;
+  background:var(--ink);color:#fff;padding:12px 18px;z-index:100;
+}
+.skip:focus{left:8px;top:8px;}
+
+/* ---------- header ---------- */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,0.94);
+  backdrop-filter:saturate(180%) blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head-bar{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;min-height:64px;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;padding:6px 0;}
+.brand img{width:78px;height:34px;object-fit:contain;object-position:left center;}
+.brand .brand-sub{
+  display:none;
+  font-size:0.625rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--ink-3);border-left:1px solid var(--line);padding-left:12px;
+}
+.nav{
+  display:flex;align-items:center;gap:2px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  border-top:1px solid var(--line);
+  margin:0 calc(-1 * var(--pad));
+  padding:0 var(--pad);
+  /* soft fade on the right edge so the scrollable nav reads as scrollable */
+  -webkit-mask-image:linear-gradient(to right,#000 84%,rgba(0,0,0,0));
+  mask-image:linear-gradient(to right,#000 84%,rgba(0,0,0,0));
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav a{
+  display:inline-flex;align-items:center;
+  min-height:46px;padding:0 12px;
+  white-space:nowrap;
+  font-size:0.8125rem;letter-spacing:0.02em;
+  color:var(--ink-2);text-decoration:none;
+  border-bottom:2px solid transparent;
+}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--ink);}
+.nav a:first-child{padding-left:0;}
+.head-cta{display:none;}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(40px,6vw,84px) 0 clamp(24px,4vw,48px);}
+.hero h1{
+  font-size:clamp(2.5rem,8.4vw,5.5rem);
+  line-height:0.97;
+  letter-spacing:-0.038em;
+  margin:0 0 1.5rem;
+}
+.hero .lead{max-width:32em;margin-bottom:2rem;}
+.hero-figure{
+  margin:clamp(32px,5vw,56px) 0 0;
+  background:var(--paper);
+}
+.hero-figure img{width:100%;height:auto;}
+.hero-caption{
+  display:flex;flex-wrap:wrap;gap:6px 18px;
+  margin-top:1rem;
+  font-size:0.75rem;letter-spacing:0.06em;color:var(--ink-3);
+  text-transform:uppercase;
+}
+
+/* ---------- ticker strip ---------- */
+.strip{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--paper-2);
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.strip::-webkit-scrollbar{display:none;}
+.strip ul{
+  display:flex;align-items:center;gap:0;
+  list-style:none;margin:0;padding:18px var(--pad);
+  white-space:nowrap;
+  max-width:1280px;margin:0 auto;
+}
+.strip li{
+  font-size:0.6875rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--ink-2);font-weight:500;
+}
+.strip li + li::before{content:"·";margin:0 1.15em;color:var(--line-2);}
+
+/* ---------- generic section head ---------- */
+.sec-head{margin-bottom:clamp(36px,5vw,72px);}
+.sec-head h2{
+  font-size:clamp(1.875rem,4.4vw,3.25rem);
+  letter-spacing:-0.03em;
+  margin-bottom:1.25rem;
+}
+.sec-head p{max-width:var(--measure);}
+
+/* ---------- the system ---------- */
+.ladder{
+  list-style:none;margin:0;padding:0;
+  border-top:1px solid var(--line);
+}
+.ladder li{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  column-gap:16px;row-gap:6px;
+  align-items:baseline;
+  padding:1.5rem 0;
+  border-bottom:1px solid var(--line);
+}
+.ladder .step-n{
+  font-family:var(--mono);
+  font-size:0.75rem;color:var(--ink-3);
+  letter-spacing:0.04em;
+}
+.ladder .step-t{
+  color:var(--ink);font-weight:500;
+  font-size:clamp(1.25rem,2.6vw,1.75rem);
+  letter-spacing:-0.02em;line-height:1.15;
+}
+.ladder .step-d{grid-column:2;font-size:0.9375rem;color:var(--ink-2);}
+.ladder .step-c{
+  grid-column:2;
+  font-size:0.75rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-3);
+}
+
+.pairs{
+  display:grid;gap:var(--gap);
+  margin-top:clamp(48px,6vw,88px);
+}
+.pair{
+  border-top:1px solid var(--line);
+  padding-top:1.75rem;
+}
+.pair-imgs{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:8px;
+  background:var(--paper-2);
+  padding:clamp(16px,3vw,32px);
+  margin-bottom:1.5rem;
+}
+.pair-imgs img{
+  width:100%;height:auto;
+  max-height:280px;object-fit:contain;
+  /* product shots are cut out on pure white — multiply drops the white box
+     out of the warm grey panel without needing a second set of files */
+  mix-blend-mode:multiply;
+}
+.pair-imgs img.is-photo{mix-blend-mode:normal;}
+.pair-plus{
+  font-size:1.25rem;color:var(--ink-3);
+  font-weight:400;line-height:1;text-align:center;
+}
+.pair h3{
+  font-size:clamp(1.125rem,2vw,1.4375rem);
+  margin-bottom:0.6rem;letter-spacing:-0.022em;
+}
+.pair p{font-size:0.9375rem;max-width:38em;}
+.pair .meta{
+  margin-top:0.9rem;
+  font-size:0.75rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-3);
+}
+
+/* ---------- full-bleed photo band ---------- */
+.band{
+  display:grid;
+  grid-template-columns:1fr;
+  border-top:1px solid var(--line);
+}
+.band-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.band-text{
+  padding:clamp(40px,7vw,88px) var(--pad);
+  display:flex;flex-direction:column;justify-content:center;
+  background:var(--paper);
+}
+.band-text .inner{max-width:32em;margin:0 auto;width:100%;}
+.band-text h2{
+  font-size:clamp(1.625rem,3.4vw,2.5rem);
+  margin-bottom:1.25rem;letter-spacing:-0.028em;
+}
+
+.size-table{
+  width:100%;border-collapse:collapse;margin-top:2rem;
+  font-size:0.875rem;
+}
+.size-table caption{
+  caption-side:bottom;text-align:left;padding-top:0.9rem;
+  font-size:0.75rem;color:var(--ink-3);
+}
+.size-table th,.size-table td{
+  text-align:left;padding:0.6rem 12px 0.6rem 0;
+  border-bottom:1px solid var(--line);
+}
+.size-table thead th{
+  font-size:0.6875rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;
+}
+.size-table tbody td:first-child{color:var(--ink);font-family:var(--mono);font-size:0.8125rem;}
+
+/* ---------- the line (family grid) ---------- */
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:clamp(40px,4vw,64px) var(--gap);
+}
+.card{display:flex;flex-direction:column;}
+.card .tile{
+  background:var(--paper-2);
+  aspect-ratio:4/5;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  margin-bottom:1.5rem;
+}
+.card .tile img{
+  width:100%;height:100%;
+  object-fit:contain;
+  padding:clamp(18px,3.2vw,40px);
+  mix-blend-mode:multiply;
+}
+.card .tile--photo img{object-fit:cover;padding:0;mix-blend-mode:normal;}
+.card h3{
+  font-size:1.1875rem;letter-spacing:-0.022em;margin-bottom:0.55rem;
+}
+.card .sku{
+  font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.06em;
+  color:var(--ink-3);margin-bottom:0.85rem;
+}
+.card p{font-size:0.9375rem;}
+.card .specs{
+  list-style:none;margin:1.1rem 0 0;padding:0;
+  display:flex;flex-wrap:wrap;gap:6px;
+}
+.card .specs li{
+  font-size:0.6875rem;letter-spacing:0.07em;text-transform:uppercase;
+  color:var(--ink-2);
+  border:1px solid var(--line);
+  border-radius:2px;
+  padding:5px 9px;
+  line-height:1.2;
+}
+.card .origin{
+  margin-top:auto;
+  padding-top:1.1rem;
+  font-size:0.75rem;
+  color:var(--ink-3);
+  letter-spacing:0.02em;
+}
+.card .origin strong{color:var(--ink-2);font-weight:500;}
+
+/* ---------- flagship ---------- */
+.flagship{background:var(--paper-2);}
+.flagship-inner{display:grid;gap:clamp(32px,4vw,64px);}
+.flagship-img{
+  display:flex;align-items:center;justify-content:center;
+  padding:clamp(8px,2vw,32px);
+  aspect-ratio:4/5;
+}
+.flagship-img img{max-height:100%;width:auto;object-fit:contain;mix-blend-mode:multiply;}
+.spec-table{
+  width:100%;border-collapse:collapse;margin-top:2rem;
+  font-size:0.9375rem;
+}
+.spec-table th,.spec-table td{
+  text-align:left;vertical-align:top;
+  padding:0.85rem 0;
+  border-bottom:1px solid var(--line-2);
+}
+.spec-table th{
+  width:44%;font-weight:400;color:var(--ink-3);
+  font-size:0.75rem;letter-spacing:0.09em;text-transform:uppercase;
+  padding-right:16px;
+}
+.spec-table td{color:var(--ink);}
+.note{
+  margin-top:1.5rem;font-size:0.8125rem;color:var(--ink-3);
+  border-left:2px solid var(--line-2);padding-left:1rem;
+}
+
+/* ---------- about ---------- */
+.about p + p{margin-top:1.35rem;}
+.about .sig{
+  margin-top:2.25rem;padding-top:1.5rem;border-top:1px solid var(--line);
+  font-size:0.8125rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink-3);
+}
+.origin-list{
+  list-style:none;margin:2rem 0 0;padding:0;
+  border-top:1px solid var(--line);
+}
+.origin-list li{
+  display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between;
+  padding:0.85rem 0;border-bottom:1px solid var(--line);
+  font-size:0.875rem;
+}
+.origin-list .what{color:var(--ink);}
+.origin-list .where{color:var(--ink-3);text-align:right;}
+
+/* ---------- where to buy ---------- */
+.buy-grid{display:grid;gap:var(--gap);}
+.buy-card{border-top:1px solid var(--line);padding-top:1.5rem;}
+.buy-card h3{font-size:1.0625rem;margin-bottom:0.6rem;}
+.buy-card p{font-size:0.9375rem;margin-bottom:0.75rem;}
+
+/* ---------- dealer form ---------- */
+.dealer{background:var(--ink);color:#c9c9c2;}
+.dealer h2{color:#fff;}
+.dealer .eyebrow{color:#8f8f86;}
+.dealer .eyebrow::before{background:var(--red);}
+.dealer .lead{color:#c9c9c2;}
+.terms{
+  display:grid;gap:var(--gap);
+  margin:clamp(36px,5vw,64px) 0;
+}
+.terms h3{
+  color:#fff;font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;
+  font-weight:500;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid #2e2e2a;
+}
+.terms ul{list-style:none;margin:0;padding:0;}
+.terms li{
+  font-size:0.9375rem;padding:0.6rem 0;border-bottom:1px solid #232320;
+}
+.terms li:last-child{border-bottom:0;}
+
+form{margin-top:clamp(32px,4vw,48px);}
+.fields{display:grid;gap:20px;}
+.field{display:flex;flex-direction:column;gap:8px;}
+.field label,legend{
+  font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:#a3a39a;
+}
+.field .opt{text-transform:none;letter-spacing:0;color:#7d7d74;}
+input[type=text],input[type=email],input[type=tel],input[type=url],select,textarea{
+  width:100%;
+  min-height:52px;
+  background:#1a1a18;
+  border:1px solid #34342f;
+  border-radius:2px;
+  color:#fff;
+  font:inherit;
+  font-size:1rem;
+  padding:12px 14px;
+  appearance:none;
+}
+textarea{min-height:120px;resize:vertical;line-height:1.5;}
+select{
+  background-image:linear-gradient(45deg,transparent 50%,#a3a39a 50%),
+                   linear-gradient(135deg,#a3a39a 50%,transparent 50%);
+  background-position:calc(100% - 20px) calc(50% + 1px),calc(100% - 14px) calc(50% + 1px);
+  background-size:6px 6px,6px 6px;
+  background-repeat:no-repeat;
+  padding-right:44px;
+}
+input::placeholder,textarea::placeholder{color:#8b8b82;}
+input:focus,select:focus,textarea:focus{border-color:#7d7d74;outline-offset:1px;}
+fieldset{border:0;padding:0;margin:0;}
+fieldset legend{padding:0;margin-bottom:12px;}
+.checks{display:grid;grid-template-columns:1fr;gap:2px;}
+.checks label{
+  display:flex;align-items:center;gap:12px;
+  min-height:46px;
+  font-size:0.9375rem;letter-spacing:0;text-transform:none;color:#c9c9c2;
+  cursor:pointer;
+}
+.checks input{
+  width:20px;height:20px;flex:0 0 auto;accent-color:#fff;margin:0;
+}
+.submit-row{
+  margin-top:28px;display:flex;flex-direction:column;gap:14px;align-items:flex-start;
+}
+.dealer .btn{background:#fff;border-color:#fff;color:var(--ink);}
+.dealer .btn:hover{background:#e9e9e4;border-color:#e9e9e4;}
+.fineprint{font-size:0.8125rem;color:#8f8f86;max-width:38em;}
+
+/* ---------- footer ---------- */
+.site-foot{border-top:1px solid var(--line);padding:clamp(48px,6vw,88px) 0 32px;}
+.foot-grid{display:grid;gap:36px var(--gap);}
+.foot-grid h3{
+  font-size:0.6875rem;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:500;margin-bottom:1rem;
+}
+.foot-grid ul{list-style:none;margin:0;padding:0;}
+.foot-grid li a,.foot-grid li{
+  font-size:0.875rem;color:var(--ink-2);text-decoration:none;
+}
+.foot-grid li a{display:inline-flex;align-items:center;min-height:44px;}
+.foot-grid li a:hover{color:var(--ink);text-decoration:underline;}
+.foot-address{font-style:normal;font-size:0.875rem;line-height:1.7;}
+.foot-origin{
+  margin-top:clamp(40px,5vw,64px);
+  padding-top:1.5rem;border-top:1px solid var(--line);
+  font-size:0.8125rem;color:var(--ink-3);max-width:56em;
+}
+.foot-tag{
+  margin-top:2.5rem;
+  font-size:clamp(1.25rem,3.2vw,2rem);
+  color:var(--ink);letter-spacing:-0.025em;font-weight:500;
+}
+.foot-legal{
+  margin-top:2rem;padding-top:1.25rem;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:6px 20px;
+  font-size:0.75rem;color:var(--ink-3);
+}
+.foot-legal a{min-height:44px;display:inline-flex;align-items:center;text-decoration:none;}
+.foot-legal a:hover{text-decoration:underline;color:var(--ink-2);}
+
+/* =========================== 768px =========================== */
+@media (min-width:768px){
+  :root{--pad:32px;}
+  .head-bar{min-height:76px;}
+  .brand img{width:88px;height:38px;}
+  .brand .brand-sub{display:block;}
+  .hero{padding-top:clamp(56px,6vw,96px);}
+  .pair-imgs img{max-height:320px;}
+  .grid{grid-template-columns:repeat(2,1fr);}
+  .buy-grid{grid-template-columns:repeat(3,1fr);}
+  .terms{grid-template-columns:repeat(2,1fr);}
+  .fields{grid-template-columns:repeat(2,1fr);}
+  .field--full{grid-column:1/-1;}
+  .checks{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:repeat(2,1fr);}
+  .band{grid-template-columns:1fr 1fr;}
+  .band-img{min-height:520px;}
+  .flagship-inner{grid-template-columns:1fr 1fr;align-items:start;}
+  .flagship-img{position:sticky;top:96px;}
+  .origin-list li{font-size:0.9375rem;}
+}
+
+/* =========================== 1080px =========================== */
+@media (min-width:1080px){
+  :root{--pad:40px;}
+  .site-head .wrap{display:flex;align-items:center;gap:clamp(24px,3vw,48px);}
+  .head-bar{display:contents;}
+  .brand{order:0;min-height:84px;}
+  .head-cta{order:2;margin-left:auto;}
+  .nav{
+    border-top:0;margin:0;padding:0;flex:1 1 auto;overflow:visible;order:1;
+    -webkit-mask-image:none;mask-image:none;
+  }
+  .nav a{padding:0 16px;min-height:84px;}
+  .nav a:first-child{padding-left:0;}
+  .head-cta{
+    display:inline-flex;align-items:center;min-height:44px;
+    font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;font-weight:500;
+    border-bottom:1px solid var(--ink);white-space:nowrap;
+  }
+  .head-cta:hover{opacity:0.6;}
+  .hero-inner{
+    display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);
+    gap:clamp(40px,5vw,80px);align-items:center;
+  }
+  .hero-figure{margin:0;}
+  .grid{grid-template-columns:repeat(3,1fr);}
+  .pairs{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:repeat(4,1fr);}
+  .terms{grid-template-columns:repeat(2,1fr);gap:80px;}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;}
+}
+
+@media print{
+  .site-head,.dealer form{display:none;}
+  body{color:#000;}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============================= HEADER ============================= -->
+<header class="site-head">
+  <div class="wrap">
+    <div class="head-bar">
+      <a class="brand" href="#top" aria-label="TILER STAR — home">
+        <img src="img/tilerstar-wordmark.png" width="453" height="195" alt="TILER STAR">
+        <span class="brand-sub">Tile &amp; finishing tools</span>
+      </a>
+      <a class="head-cta" href="#dealer">Become a dealer</a>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="#system">The system</a>
+      <a href="#line">The line</a>
+      <a href="#kf">KF caulk gun</a>
+      <a href="#about">About</a>
+      <a href="#buy">Where to buy</a>
+      <a href="#dealer">Dealers</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============================== HERO ============================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div>
+        <p class="eyebrow">Professional tile &amp; finishing tools</p>
+        <h1>Cut it.<br>Spread it.<br>Seal it.</h1>
+        <p class="lead">Seven tool families built around one trade. Knives and blades,
+          one-piece stainless spatulas, cartridge and sausage guns with the nozzles to
+          feed them, gloves in five sizes. One brand from the score line to the seal.</p>
+        <div class="btn-row">
+          <a class="btn" href="#system">See the system</a>
+          <a class="btn btn--ghost" href="#dealer">Become a dealer</a>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="../../assets/web/KS/ks-side-full-white-800.webp"
+             srcset="../../assets/web/KS/ks-side-full-white-800.webp 800w,
+                     ../../assets/web/KS/ks-side-full-white-2000.webp 2000w"
+             sizes="(min-width:1080px) 55vw, 100vw"
+             width="2000" height="1191" fetchpriority="high"
+             alt="TILER STAR KS skeleton caulk gun: black barrel, aluminum frame and orange grip, shown from the side.">
+        <figcaption class="hero-caption">
+          <span>KS · Standard skeleton caulk gun</span>
+          <span>10 oz cartridge</span>
+          <span>Rebuildable</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= STRIP ============================== -->
+<div class="strip">
+  <ul>
+    <li>One-piece construction</li>
+    <li>AISI 1080 oil-quenched edges</li>
+    <li>Fully rebuildable caulk guns</li>
+    <li>27 parts, 7 families</li>
+    <li>Wholesale from $1,500</li>
+  </ul>
+</div>
+
+<!-- ============================ THE SYSTEM ========================== -->
+<section class="section" id="system">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The system</p>
+      <h2>A kit for one trade,<br>not a wall of SKUs.</h2>
+      <p class="lead">Twenty-seven parts is not a warehouse. It is the set of things a tile
+        setter actually carries — and every one of them has a job in the same sequence,
+        in the same order you do the work.</p>
+    </div>
+
+    <ol class="ladder">
+      <li>
+        <span class="step-n">01</span>
+        <span class="step-t">Cut it</span>
+        <span class="step-d">Snap-off knives in 18 mm and 9 mm, and the blades that feed
+          them. The body lasts years; the edge lasts a shift.</span>
+        <span class="step-c">3 knives · 4 blade packs</span>
+      </li>
+      <li>
+        <span class="step-n">02</span>
+        <span class="step-t">Spread it</span>
+        <span class="step-d">One-piece stainless from a 1-1/2 inch detail knife to an
+          8 inch finishing knife, plus the scoop that empties the pail.</span>
+        <span class="step-c">7 widths · 1 bucket scoop</span>
+      </li>
+      <li>
+        <span class="step-n">03</span>
+        <span class="step-t">Seal it</span>
+        <span class="step-d">Three cartridge guns for three draws, a 20 oz sausage gun for
+          volume, and two nozzle profiles so the bead matches the joint.</span>
+        <span class="step-c">4 guns · 2 nozzle sets</span>
+      </li>
+      <li>
+        <span class="step-n">04</span>
+        <span class="step-t">Carry it</span>
+        <span class="step-d">Gloves in five measured sizes, and a belt magnet that holds
+          the clips, spacers and fasteners your hands can't.</span>
+        <span class="step-c">5 sizes · 1 holder</span>
+      </li>
+    </ol>
+
+    <div class="pairs">
+      <article class="pair">
+        <div class="pair-imgs">
+          <img src="../../assets/web/C18-1/knives-lineup-3-white-800.webp"
+               width="800" height="971" loading="lazy"
+               alt="Three TILER STAR snap-off knives — C9-1, C18-1 and C18-2 — with green anodized bodies.">
+          <span class="pair-plus" aria-hidden="true">+</span>
+          <img src="../../assets/web/ESB18/esb18-box-open-white-800.webp"
+               width="800" height="921" loading="lazy"
+               alt="Open ESB18 dispenser box holding ten 18 mm segmented snap-off blades.">
+        </div>
+        <h3>The knife takes any blade. The blade fits any knife.</h3>
+        <p>Our 18 mm and 9 mm blades are cut to the standard dimension, so they drop into
+          the knife already on your hip — and our knife bodies take anyone else's blades.
+          Nothing here locks you in. Buy them by the ten, or by the hundred and stop
+          rationing edges.</p>
+        <p class="meta">C18-1 · C18-2 · C9-1 → ESB18 · ESB18x10 · ESB9 · ESB9x10</p>
+      </article>
+
+      <article class="pair">
+        <div class="pair-imgs">
+          <img src="../../assets/web/KF600/kf600-with-nozzles-white-800.webp"
+               width="800" height="609" loading="lazy"
+               alt="KF600 sausage gun with a black barrel and chrome collars, shown with one blue and one black nozzle.">
+          <span class="pair-plus" aria-hidden="true">+</span>
+          <img class="is-photo" src="img/nozzles-thick.jpg"
+               width="825" height="1100" loading="lazy"
+               alt="Five blue heavy-bead nozzles laid out on gray concrete next to their bagged set.">
+        </div>
+        <h3>A cured tip ruins a bead. Cut a fresh one.</h3>
+        <p>The KF600 runs 20 oz sausage packs — twice the material per load and almost none
+          of the packaging in the dumpster. Two nozzle profiles feed it: heavy bore for
+          expansion joints and perimeter gaps, fine bore for the bead that shows. Five to
+          a pack, because nozzles are a consumable, not an heirloom.</p>
+        <p class="meta">KF600 → NOZ-THICK · NOZ-THIN</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== BAND: IN USE ============================ -->
+<section class="band">
+  <div class="band-img">
+    <img src="img/mth-on-belt.jpg" width="1050" height="1400" loading="lazy"
+         alt="A C18-2 snap-off knife held on a worker's belt by the TILER STAR magnetic tool holder.">
+  </div>
+  <div class="band-text">
+    <div class="inner">
+      <p class="eyebrow">Built for the last two inches</p>
+      <h2>Tile is a finish material. Every mistake stays visible.</h2>
+      <p>Tile, stone and finish work happen at the end of the job, when the schedule is
+        gone and the budget is gone and the work is the only thing anyone will ever see.
+        That is the part of the trade TILER STAR builds for.</p>
+      <p style="margin-top:1.25rem">Every part in the catalog exists because a setter
+        needed it to be better than what was on the shelf. There is no cordless line, no
+        accessory wall, no seasonal collection.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= THE LINE =========================== -->
+<section class="section" id="line">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">The line</p>
+      <h2>Seven families. Twenty-seven parts.</h2>
+      <p class="lead">Where a country of manufacture is certified, it is printed here. Where
+        it isn't yet, we say so instead of guessing. That rule holds on every page we
+        publish.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- 1. knives -->
+      <article class="card">
+        <div class="tile">
+          <img src="../../assets/web/C18-1/c18-1-and-c18-2-white-800.webp"
+               width="800" height="1007" loading="lazy"
+               alt="TILER STAR C18-1 and C18-2 18 mm snap-off knives side by side.">
+        </div>
+        <h3>Snap-off knives</h3>
+        <p class="sku">C18-1 · C18-2 · C9-1</p>
+        <p>Eighteen millimetres for underlayment, backer board, membrane and carton.
+          Nine for the corners the 18 can't reach. Load a fresh segment, snap the dull one,
+          keep moving.</p>
+        <ul class="specs">
+          <li>18 mm</li><li>9 mm</li><li>PRO SERIES</li><li>3 SKUs</li>
+        </ul>
+        <p class="origin"><strong>Made in South Korea.</strong> Designed in the USA.</p>
+      </article>
+
+      <!-- 2. blades -->
+      <article class="card">
+        <div class="tile">
+          <img src="../../assets/web/ESB9/esb9-box-open-white-800.webp"
+               width="800" height="883" loading="lazy"
+               alt="Open PRO SERIES dispenser box of 9 mm segmented snap-off blades.">
+        </div>
+        <h3>Replacement blades</h3>
+        <p class="sku">ESB18 · ESB18x10 · ESB9 · ESB9x10</p>
+        <p>Carbon steel quenched in oil for a hard, fine edge that survives abrasive board
+          instead of rolling on it, with snap lines that break square. Ten to a dispenser,
+          or a hundred to a box.</p>
+        <ul class="specs">
+          <li>American AISI 1080 steel</li><li>10 &amp; 100 packs</li><li>4 SKUs</li>
+        </ul>
+        <p class="origin">Country of manufacture published once the mill certification is
+          in hand.</p>
+      </article>
+
+      <!-- 3. spatulas -->
+      <article class="card">
+        <div class="tile">
+          <img src="../../assets/web/SB4/sb4-flat-white-800.webp"
+               width="800" height="1316" loading="lazy"
+               alt="TILER STAR SB4 four-inch one-piece stainless putty knife, blade and handle in a single piece of steel.">
+        </div>
+        <h3>One-piece stainless spatulas</h3>
+        <p class="sku">SB1.5 · SB2.5 · SB3 · SB4 · SB5 · SB6 · SB8</p>
+        <p>A putty knife fails where the blade meets the handle. Ours has no joint — blade
+          through handle, one piece of stainless. Nothing to loosen, nothing to pack with
+          thinset. Use it as a pry bar; you were going to anyway.</p>
+        <ul class="specs">
+          <li>1-1/2 to 8 in</li><li>No rivet · no ferrule</li><li>7 SKUs</li>
+        </ul>
+        <p class="origin"><strong>SB3–SB8 made in Canada.</strong> SB1.5 and SB2.5: origin
+          not yet confirmed.</p>
+      </article>
+
+      <!-- 4. bucket scoop -->
+      <article class="card">
+        <div class="tile">
+          <img src="../../assets/web/BS6.5/bs65-flat-white-800.webp"
+               width="800" height="1064" loading="lazy"
+               alt="TILER STAR BS6.5 one-piece stainless bucket scoop with a radiused blade.">
+        </div>
+        <h3>Bucket scoop</h3>
+        <p class="sku">BS6.5</p>
+        <p>A radiused blade that matches the wall of a 5 gallon pail, so it pulls a full
+          load in one pass and scrapes the pail clean at the end of the day. One piece of
+          steel — no handle to fill with thinset.</p>
+        <ul class="specs">
+          <li>6-1/2 in</li><li>One-piece stainless</li><li>1 SKU</li>
+        </ul>
+        <p class="origin"><strong>Made in Canada.</strong> Designed in the USA.</p>
+      </article>
+
+      <!-- 5. caulk guns -->
+      <article class="card">
+        <div class="tile">
+          <img src="../../assets/web/KS/ks-angled-white-800.webp"
+               width="800" height="1235" loading="lazy"
+               alt="TILER STAR KS skeleton caulk gun seen at an angle, showing the bearing stack and ladder hook.">
+        </div>
+        <h3>Skeleton caulk guns</h3>
+        <p class="sku">KF · KL · KS</p>
+        <p>A caulk gun is judged on three days: the day the trigger gets sloppy, the day it
+          starts dripping, the day the rod bends. Ours come apart with hand tools, so a
+          worn part is a part you replace, not a gun you replace.</p>
+        <ul class="specs">
+          <li>10 oz cartridge</li><li>Anti-drip release</li><li>3 SKUs</li>
+        </ul>
+        <p class="origin">Country of manufacture published once certification is in hand.</p>
+      </article>
+
+      <!-- 6. sausage gun -->
+      <article class="card">
+        <div class="tile">
+          <img src="../../assets/web/KF600/kf600-with-10-nozzles-white-2000.webp"
+               width="2000" height="1379" loading="lazy"
+               alt="KF600 sausage gun above five blue heavy-bead and five black fine-bead nozzles.">
+        </div>
+        <h3>Sausage &amp; bulk gun</h3>
+        <p class="sku">KF600</p>
+        <p>A closed barrel for the format professionals buy sealant in. Steel barrel in
+          black and chrome, smooth continuous draw, and a nozzle system you swap in
+          seconds for the bead you actually want.</p>
+        <ul class="specs">
+          <li>600 ml / 20 oz</li><li>Swappable nozzles</li><li>1 SKU</li>
+        </ul>
+        <p class="origin">Origin not yet confirmed — no claim until it is.</p>
+      </article>
+
+      <!-- 7. nozzles -->
+      <article class="card">
+        <div class="tile tile--photo">
+          <img src="img/nozzles-thick.jpg" width="825" height="1100" loading="lazy"
+               alt="Five blue heavy-bead nozzles on gray concrete beside the bag they ship in.">
+        </div>
+        <h3>Nozzle sets</h3>
+        <p class="sku">NOZ-THICK · NOZ-THIN</p>
+        <p>Heavy bore for the joints you fill: expansion joints, perimeter gaps, backer
+          seams. Fine bore for the joints that show: tile-to-tub, inside corners,
+          countertop-to-backsplash. Five in a pack.</p>
+        <ul class="specs">
+          <li>Heavy bead</li><li>Fine bead</li><li>5 per pack</li><li>2 SKUs</li>
+        </ul>
+        <p class="origin">Origin not yet confirmed — no claim until it is.</p>
+      </article>
+
+      <!-- 8. gloves -->
+      <article class="card">
+        <div class="tile">
+          <img src="../../assets/web/GL/gloves-pair-xs-white-800.webp"
+               width="800" height="828" loading="lazy"
+               alt="A pair of TILER STAR GL series work gloves, red knit shell with black textured palms.">
+        </div>
+        <h3>Work gloves</h3>
+        <p class="sku">GL series · sizes 7–11</p>
+        <p>Tile work is wet, sharp and alkaline. Enough palm to handle a cut edge, enough
+          feel to set a spacer without taking the glove off. Five sizes measured in inches
+          — including a true size 7, where most trade ranges start at 8.</p>
+        <ul class="specs">
+          <li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>5 SKUs</li>
+        </ul>
+        <p class="origin">Origin not yet confirmed — no claim until it is.</p>
+      </article>
+
+      <!-- 9. magnetic holder -->
+      <article class="card">
+        <div class="tile tile--photo">
+          <img src="img/mth-front.jpg" width="825" height="1100" loading="lazy"
+               alt="Front face of the TILER STAR MTH magnetic tool holder, a matte black belt-mounted pad.">
+        </div>
+        <h3>Magnetic tool holder</h3>
+        <p class="sku">MTH</p>
+        <p>Clips to your belt and holds what your hands can't — screws, spacers, leveling
+          clips, a margin trowel, a utility knife. Nothing to reach into, nothing to fish
+          through, no clips scattered across the floor.</p>
+        <ul class="specs">
+          <li>Belt mount</li><li>1 SKU</li>
+        </ul>
+        <p class="origin">Origin not yet confirmed — no claim until it is.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FLAGSHIP ============================ -->
+<section class="section flagship" id="kf">
+  <div class="wrap">
+    <div class="flagship-inner">
+      <div class="flagship-img">
+        <img src="../../assets/web/KF/kf-angled-white-800.webp"
+             srcset="../../assets/web/KF/kf-angled-white-800.webp 800w,
+                     ../../assets/web/KF/kf-angled-white-2000.webp 2000w"
+             sizes="(min-width:768px) 46vw, 100vw"
+             width="800" height="1079" loading="lazy"
+             alt="TILER STAR KF heavy-duty skeleton caulk gun in black with a chrome collar and steel ladder hook.">
+      </div>
+      <div>
+        <p class="eyebrow">The flagship</p>
+        <h2 style="font-size:clamp(1.875rem,4.4vw,3.25rem);margin-bottom:1.25rem">
+          KF · Heavy-duty skeleton caulk gun</h2>
+        <p class="lead">Built for structural adhesive, high-modulus sealant and cold
+          cartridges — the material that stalls a hardware-store gun. Rotating barrel for a
+          continuous bead in corners and overhead, instant pressure release so it stops
+          when you stop, and a frame that comes apart with hand tools.</p>
+
+        <table class="spec-table">
+          <caption class="visually-hidden" style="position:absolute;left:-9999px">
+            KF caulk gun specifications</caption>
+          <tbody>
+            <tr><th scope="row">Plunger thrust</th><td>992 lbf / 450 kg</td></tr>
+            <tr><th scope="row">Bearings</th><td>11 — smoother draw, less trigger effort</td></tr>
+            <tr><th scope="row">Cartridge cradle</th><td>Cast aluminum, 3.5 mm (0.138 in) wall</td></tr>
+            <tr><th scope="row">Barrel</th><td>Rotating</td></tr>
+            <tr><th scope="row">Release</th><td>Instant pressure release, anti-drip</td></tr>
+            <tr><th scope="row">Cartridge</th><td>10 oz standard</td></tr>
+            <tr><th scope="row">Service</th><td>Fully disassemblable — every wear part replaceable</td></tr>
+            <tr><th scope="row">Origin</th><td>Published once certification is in hand</td></tr>
+          </tbody>
+        </table>
+
+        <p class="note">Thrust ratio is the number US buyers compare guns on, and it is a
+          different measurement from an absolute thrust in pounds-force. We will publish
+          the ratio when the factory certifies it — not before, and never by converting
+          one into the other.</p>
+
+        <div class="btn-row" style="margin-top:2rem">
+          <a class="btn btn--ghost" href="#buy">Where to buy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ABOUT ============================= -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">About</p>
+      <h2>We build tools for<br>the last two inches.</h2>
+    </div>
+
+    <div class="measure about">
+      <p>We make seven things and we make them without compromise: snap-off knives,
+        replacement blades, one-piece stainless spatulas, skeleton caulk guns, a 600 ml
+        sausage gun with the nozzles that feed it, work gloves, and a magnetic tool holder.
+        There is no cordless line, no accessory wall, no seasonal collection.</p>
+      <p>Our approach is simple. We remove the failure points. Spatulas are cut from a
+        single piece of stainless — no ferrule, no rivet, no handle to work loose in a
+        bucket of thinset. Blades are AISI 1080 carbon steel, quenched in oil so the edge
+        holds through a full board of backer. Caulk guns come apart with hand tools,
+        because a tool you can rebuild is a tool you keep.</p>
+      <p>And we tell you where every tool is made. Our supply chain runs across three
+        countries, because we buy each part where it is made best — and because the buyer
+        deserves to know that before he pays, not after. Where a factory has not yet
+        certified an origin in writing, this site says so plainly rather than filling the
+        gap with a flag.</p>
+
+      <ul class="origin-list">
+        <li><span class="what">Snap-off knives</span><span class="where">Made in South Korea</span></li>
+        <li><span class="what">Spatulas SB3–SB8, bucket scoop</span><span class="where">Made in Canada</span></li>
+        <li><span class="what">Blades, caulk guns, gloves, nozzles, holder</span><span class="where">Origin pending certification</span></li>
+      </ul>
+
+      <p class="sig">TILER STAR LLC · Designed in the USA · Country of manufacture stated
+        on every product page</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== WHERE TO BUY ========================== -->
+<section class="section" id="buy" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where to buy</p>
+      <h2>Sold through the trade.</h2>
+      <p class="lead">TILER STAR sells through tool distributors, tile and stone supply
+        houses, and contractor supply. We are building the North American dealer network
+        now.</p>
+    </div>
+
+    <div class="buy-grid">
+      <div class="buy-card">
+        <h3>Find a dealer</h3>
+        <p>Enter your ZIP to see stocking distributors near you. We don't have a stocking
+          dealer in every area yet — if yours is empty, order direct while we build the
+          network out.</p>
+        <a class="txtlink" href="#dealer">Dealer locator</a>
+      </div>
+      <div class="buy-card">
+        <h3>Buy direct</h3>
+        <p>The full 27-part catalog ships from our online store, with the country of
+          manufacture stated on every product page.</p>
+        <a class="txtlink" href="#line">See the catalog</a>
+      </div>
+      <div class="buy-card">
+        <h3>Sell TILER STAR</h3>
+        <p>You run a supply house, a contractor supply, or a tool shop and you sell to the
+          trade. Wholesale terms are below.</p>
+        <a class="txtlink" href="#dealer">Wholesale terms</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= DEALER ============================= -->
+<section class="section dealer" id="dealer">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Dealers</p>
+      <h2 style="color:#fff">Become a TILER STAR dealer.</h2>
+      <p class="lead">We're opening North American distribution. If you sell to tile
+        setters, finish carpenters, drywall crews or remodeling contractors, we want to
+        talk.</p>
+    </div>
+
+    <div class="terms">
+      <div>
+        <h3>What you get</h3>
+        <ul>
+          <li>Three-tier wholesale pricing — opening orders from $1,500, with improved
+            terms at $5,000 and $7,500</li>
+          <li>The full 27-SKU catalog, no forced assortment</li>
+          <li>Product photography, spec sheets and point-of-sale artwork</li>
+          <li>A direct line to the people who make the decisions — no distributor layer
+            between you and us</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What we ask</h3>
+        <ul>
+          <li>You sell to the trade</li>
+          <li>You keep the line in stock, not just in a catalog</li>
+          <li>You hold our published dealer pricing</li>
+        </ul>
+      </div>
+    </div>
+
+    <form action="/dealer-inquiry" method="post">
+      <h3 style="color:#fff;font-size:1.125rem;letter-spacing:-0.02em;margin-bottom:1.5rem">
+        Request wholesale pricing</h3>
+
+      <div class="fields">
+        <div class="field">
+          <label for="biz">Business name</label>
+          <input id="biz" name="business_name" type="text" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="contact">Contact name</label>
+          <input id="contact" name="contact_name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Business email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="biztype">Business type</label>
+          <select id="biztype" name="business_type" required>
+            <option value="">Select one</option>
+            <option>Tile &amp; stone supply</option>
+            <option>Contractor supply</option>
+            <option>Tool retailer</option>
+            <option>Online retailer</option>
+            <option>Distributor</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="loc">Location — city, state, ZIP</label>
+          <input id="loc" name="location" type="text" autocomplete="address-level2" required>
+        </div>
+        <div class="field">
+          <label for="site">Website <span class="opt">(optional)</span></label>
+          <input id="site" name="website" type="url" inputmode="url" placeholder="https://">
+        </div>
+        <div class="field">
+          <label for="resale">Resale certificate #
+            <span class="opt">(required before first order)</span></label>
+          <input id="resale" name="resale_cert" type="text">
+        </div>
+
+        <fieldset class="field field--full">
+          <legend>Which categories interest you?</legend>
+          <div class="checks">
+            <label><input type="checkbox" name="categories" value="knives"> Knives</label>
+            <label><input type="checkbox" name="categories" value="blades"> Blades</label>
+            <label><input type="checkbox" name="categories" value="spatulas"> Spatulas</label>
+            <label><input type="checkbox" name="categories" value="caulk-guns"> Skeleton caulk guns</label>
+            <label><input type="checkbox" name="categories" value="sausage"> Sausage gun &amp; nozzles</label>
+            <label><input type="checkbox" name="categories" value="gloves"> Work gloves</label>
+            <label><input type="checkbox" name="categories" value="magnetic"> Magnetic holders</label>
+            <label><input type="checkbox" name="categories" value="all"> All of it</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="order">Estimated opening order</label>
+          <select id="order" name="opening_order">
+            <option value="">Select one</option>
+            <option>$1,500 – $5,000</option>
+            <option>$5,000 – $7,500</option>
+            <option>$7,500+</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field field--full">
+          <label for="notes">Anything we should know? <span class="opt">(optional)</span></label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+      </div>
+
+      <div class="submit-row">
+        <button class="btn" type="submit">Request pricing</button>
+        <p class="fineprint">We reply to every inquiry within two business days. We don't
+          sell your information and we don't add you to a newsletter unless you ask.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- =========================== BAND: GLOVES ========================= -->
+<section class="band" style="border-top:0">
+  <div class="band-text">
+    <div class="inner">
+      <p class="eyebrow">Sizes 7 to 11</p>
+      <h2>A glove that starts where most ranges stop.</h2>
+      <p>Most trade glove ranges effectively begin at size 8. Ours begins at a true 7,
+        measured in inches around the palm, so the person with smaller hands buys a work
+        glove instead of a compromise.</p>
+      <p style="margin-top:1.25rem">Wrap a tape around your dominant hand at the widest
+        part of the palm, just below the knuckles, thumb left out. The number in inches is
+        your size. Between sizes? Go down — a work glove should be snug, not loose.</p>
+
+      <table class="size-table">
+        <caption>Hand circumference, measured around the palm, thumb excluded</caption>
+        <thead>
+          <tr><th scope="col">SKU</th><th scope="col">Size</th><th scope="col">Circumference</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>GL-S</td><td>S · 7</td><td>7 in / 178 mm</td></tr>
+          <tr><td>GL-M</td><td>M · 8</td><td>8 in / 203 mm</td></tr>
+          <tr><td>GL-L</td><td>L · 9</td><td>9 in / 229 mm</td></tr>
+          <tr><td>GL-XL</td><td>XL · 10</td><td>10 in / 254 mm</td></tr>
+          <tr><td>GL-XXL</td><td>XXL · 11</td><td>11 in / 279 mm</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="band-img">
+    <img src="img/gloves-in-use.jpg" width="1050" height="1400" loading="lazy"
+         alt="Both hands wearing TILER STAR GL series gloves, palms up, showing the black textured grip coating.">
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================ -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3>Tools</h3>
+        <ul>
+          <li><a href="#line">Snap-off knives</a></li>
+          <li><a href="#line">Replacement blades</a></li>
+          <li><a href="#line">Stainless spatulas</a></li>
+          <li><a href="#kf">Caulk guns</a></li>
+          <li><a href="#line">Sausage gun &amp; nozzles</a></li>
+          <li><a href="#line">Work gloves</a></li>
+          <li><a href="#line">Magnetic holders</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About TILER STAR</a></li>
+          <li><a href="#line">PRO SERIES</a></li>
+          <li><a href="#buy">Where to buy</a></li>
+          <li><a href="#dealer">Become a dealer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#line">Spec sheets &amp; downloads</a></li>
+          <li><a href="#kf">Caulk gun parts &amp; service</a></li>
+          <li><a href="#buy">Shipping</a></li>
+          <li><a href="#buy">Returns</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <address class="foot-address">
+          TILER STAR LLC<br>
+          1950 W. Corporate Way, PMB 95972<br>
+          Anaheim, CA 92801, USA
+        </address>
+      </div>
+    </div>
+
+    <p class="foot-origin">Designed in the USA. Country of manufacture is stated on every
+      product page. TILER STAR products are manufactured in Canada and South Korea, and at
+      facilities whose origin certification is in progress — those SKUs carry no origin
+      claim until it is complete.</p>
+
+    <p class="foot-tag">Built for the last two inches.</p>
+
+    <div class="foot-legal">
+      <span>© 2026 TILER STAR LLC. All rights reserved.</span>
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms of sale</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

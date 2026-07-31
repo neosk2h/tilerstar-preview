@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>TILER STAR — три концепции сайта</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#141416;color:#f2f2f0;font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       padding:32px 20px 64px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1100px;margin:0 auto}
+  header{border-bottom:1px solid #2e2e32;padding-bottom:24px;margin-bottom:32px}
+  .brand{font:700 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.22em;color:#FF4F0F}
+  h1{font-size:clamp(26px,6vw,40px);line-height:1.1;margin:14px 0 10px;font-weight:800;letter-spacing:-.02em}
+  .sub{color:#9a9a9d;max-width:60ch;font-size:15px}
+  .grid{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
+  .card{background:#1c1c1f;border:1px solid #2e2e32;border-radius:10px;overflow:hidden;
+        display:flex;flex-direction:column;transition:border-color .15s}
+  .card:hover,.card:focus-within{border-color:#FF4F0F}
+  .card .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .tag{font:700 11px/1 ui-monospace,monospace;letter-spacing:.18em;color:#FF4F0F}
+  h2{font-size:20px;font-weight:700;letter-spacing:-.01em}
+  .card p{color:#9a9a9d;font-size:14px;flex:1}
+  .ref{font-size:12px;color:#6d6d70;border-top:1px solid #2e2e32;padding-top:10px}
+  a.btn{display:block;margin:16px 20px 20px;padding:14px;background:#FF4F0F;color:#141416;
+        text-align:center;font-weight:700;text-decoration:none;border-radius:6px;min-height:44px;
+        font-size:15px;letter-spacing:.02em}
+  a.btn:hover{background:#ff6a33}
+  .note{margin-top:36px;padding:18px 20px;background:#241a12;border-left:3px solid #FF4F0F;
+        border-radius:0 8px 8px 0;font-size:14px;color:#d8cfc7}
+  .note b{color:#fff}
+  footer{margin-top:32px;color:#6d6d70;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">TILER STAR · US MARKET</div>
+    <h1>Три концепции сайта</h1>
+    <p class="sub">Предпросмотр. Все макеты на реальных фото товара и реальном английском тексте.
+       Ничего не выдумано, цены и характеристики без подтверждения не публикуются.</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <div class="body">
+        <div class="tag">ВАРИАНТ A</div>
+        <h2>Индустриальная мощь</h2>
+        <p>Тёмная и тяжёлая. Крупная плакатная типографика, диагонали из логотипа,
+           сигнальный оранжевый с рукоятки KS. Инструмент подан как оружие профессионала.</p>
+        <div class="ref">По мотивам milwaukeetool.com</div>
+      </div>
+      <a class="btn" href="a/">Смотреть A</a>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <div class="tag">ВАРИАНТ B</div>
+        <h2>Чистая система</h2>
+        <p>Светлая и просторная. Товар на белом, единственный цвет на странице — сам инструмент.
+           Ведёт мысль «комплект для одного ремесла, а не склад».</p>
+        <div class="ref">По мотивам holstery.com</div>
+      </div>
+      <a class="btn" href="b/">Смотреть B</a>
+    </div>
+
+    <div class="card">
+      <div class="body">
+        <div class="tag">ВАРИАНТ C</div>
+        <h2>Технический документ</h2>
+        <p>Эстетика инженерного чертежа. У каждой цифры помечен источник:
+           измерено, заявлено заводом или не предоставлено. Честность как язык дизайна.</p>
+        <div class="ref">Оригинальная концепция</div>
+      </div>
+      <a class="btn" href="c/">Смотреть C</a>
+    </div>
+  </div>
+
+  <div class="note">
+    <b>Закрыто от поисковиков.</b> Пока не решён вопрос с товарным знаком TILER
+    (зарегистрирован в USPTO на китайскую компанию, класс 008), страницы намеренно
+    закрыты от индексации. Ссылка работает, но в поиске сайт не появится.
+  </div>
+
+  <footer>Предпросмотр для выбора направления · 27 SKU · 7 товарных семейств</footer>
+</div>
+</body>
+</html>
